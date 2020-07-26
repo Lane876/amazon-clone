@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header{
+  background-color: #121921;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header_logo{
+  width: 100px;
+  margin: 0 20px;
+  margin-top: 18px;
+  /* object-fit: contain; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header_search{
+  display: flex;
+  flex: 1;
+}
+
+.header_search_input{
+  height: 12px;
+  padding: 10px;
+  border: none;
+  /* min-width: 30%; */
+  width: 100%;
+}
+
+.header_serach_icon{
+  background-color: #cd9042;
+  padding: 5px;
+  height: 22px !important;
+}
+
+.header_nav{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.header_link{
+  color: white;
+  text-decoration: none;
+}
+
+.header_options{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.header_otion_one{
+  font-size: 10px;
+}
+.header_otion_two{
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.header_option_basket{
+  display: flex;
+  align-items: center;
+}
+
+.basket_count{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.home {
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.banner{
+  width: 100%;
+  mask: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  z-index: -1;
+  margin-bottom: -150px;
+}
+
+.home_row{
+  display: flex;
+  z-index: 1;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.product{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-end;
+  padding: 20px;
+  max-width: 400px;
+  min-width: 100px;
+  background-color: white;
+  z-index: 1;
+  margin: 10px;
+}
+.product_price{
+  margin-top: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.product_info{
+  height: 100px;
+  margin-bottom: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.product_rating{
+  display: flex;
+}
+
+.product > img {
+  max-height: 200px;
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.product > button {
+  background-color: #f0c14b;
+  border: 1px solid;
 }
