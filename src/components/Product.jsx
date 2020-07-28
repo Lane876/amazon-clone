@@ -1,6 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
+import { StateContext } from "../StateProvider";
 
 const Product = ({ id, img, price, title, rating }) => {
+  const [{basket}, dispatch] = useContext(StateContext)
+
+  const addToBasket = () =>(
+    dispatch({
+      type: 'ADD_TO_BASKET',
+      payload:{
+        id: id,
+        price: price,
+        title: title,
+        img: img,
+        rating: rating,
+      }
+    })
+  )
+
   return (
     <div className="product">
       <div className="product_info">
@@ -18,7 +34,7 @@ const Product = ({ id, img, price, title, rating }) => {
         </div>
       </div>
       <img src={img} alt="img" />
-      <button>Add to basket</button>
+      <button onClick={addToBasket}>Add to basket</button>
     </div>
   );
 };
