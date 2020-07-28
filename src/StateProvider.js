@@ -45,4 +45,4 @@ function reducer(state, action) {
 export default reducer;
 
 
-export const getTotal = (basket) => basket?.reduce((amount, item)=> item.price + amount, 0)
+// export const getTotal = (basket) => basket?.reduce((amount, item)=> item.price + amount, 0)
