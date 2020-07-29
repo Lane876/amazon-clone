@@ -196,7 +196,8 @@ body{
 
 @media only screen and (max-width: 500px){
   .checkout_title{
-    padding: 80px;
+    padding-top: 80px;
+    padding-bottom: 40px;
     border-bottom: 1px solid lightgrey;
 
   }
@@ -266,7 +267,7 @@ body{
   border: 1px solid #dddddd;
   border-radius: 3px;
   position: fixed;
-  top: 60px;
+  top: 160px;
   left: 0px;
   right: 0px;
   margin-right: auto;
