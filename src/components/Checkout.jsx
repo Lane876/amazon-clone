@@ -13,12 +13,16 @@ const Checkout = () => {
       <img src={banner} alt="" className="checkout_ad" />
 
       {basket?.length === 0 ? (
-        <div>
+        <div style={{
+        textAlign:'center'
+        }}>
           <h1>Your basket is empty</h1>
         </div>
       ) : (
         <div>
-          <h2 className="checkout_title">Your shopping basket</h2>
+          <h2 className="checkout_title" style={{
+        textAlign:'center'
+        }}>Your shopping basket</h2>
           {basket.map((item, index) => (
             <CheckoutProduct
               key={index}
