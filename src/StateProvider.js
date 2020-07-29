@@ -2,6 +2,7 @@ import React, { createContext, useReducer, useContext } from "react";
 
 export const initialState = {
   basket: [],
+  user: null
 };
 
 export const StateContext = createContext();
@@ -17,6 +18,10 @@ export const StateProvider = ({ reducer, initialState, children }) => (
 function reducer(state, action) {
   console.log(action);
   switch (action.type) {
+    case "SET_USER":
+      return {...state,
+      user: action.payload}
+
     case "ADD_TO_BASKET":
       return {
         ...state,
