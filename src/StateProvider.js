@@ -13,10 +13,8 @@ export const StateProvider = ({ reducer, initialState, children }) => (
   </StateContext.Provider>
 );
 
-// export const useStateValue = () => useContext(StateContext)
 
 function reducer(state, action) {
-  console.log(action);
   switch (action.type) {
     case "SET_USER":
       return {...state,
